@@ -1,0 +1,21 @@
+{
+  "name": "swoole_work",
+  "description": "A demo for swoole",
+  "type": "Application",
+  "keywords": [
+    "PHP",
+    "swoole"
+  ],
+  "require": {
+    "php": ">= 7.2.0"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  },
+  "require-dev": {
+    "eaglewu/swoole-ide-helper": "dev-master"
+  }
+}
