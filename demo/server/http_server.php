@@ -8,6 +8,13 @@
 
 $server = new swoole_http_server('0.0.0.0', 8811);
 
+$server->set(
+    [
+        'enable_static_handler' => true,
+        'document_root' => '/home/work/htdocs/swoole_work/data',
+    ]
+);
+
 $server->on('request', function ($request, $response) {
     var_dump($request->get);
     $response->end('<h1>HelloWorld!!!</h1>');
