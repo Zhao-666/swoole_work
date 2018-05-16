@@ -19,6 +19,12 @@ class Ws
         $this->ws->on('open', [$this, 'onOpen']);
         $this->ws->on('message', [$this, 'onMessage']);
         $this->ws->on('close', [$this, 'onClose']);
+        $this->ws->on('task', [$this, 'onTask']);
+        $this->ws->on('finish', [$this, 'onFinish']);
+        $this->ws->set([
+            'worker_num' => 2,
+            'task_worker_num' => 2
+        ]);
 
         $this->ws->start();
     }
@@ -36,7 +42,25 @@ class Ws
     public function onMessage($ws, $frame)
     {
         echo "client-push-message: $frame->data \n";
+        $data = [
+            'task' => 1,
+            'fd' => $frame->fd
+        ];
+        $this->ws->task($data);
         $this->ws->send($frame->fd, "server-push:" . date('Y-m-d H:i:s'));
+    }
+
+    public function onTask($serv, $taskId, $workerId, $data)
+    {
+        print_r($data);
+        sleep(10);
+        return 'on task finish';
+    }
+
+    public function onFinish($serv, $taskId, $data)
+    {
+        echo "taskId:$taskId";
+        echo "finish-data-success " . $data;
     }
 
     /**
