@@ -46,8 +46,11 @@ class Ws
             'task' => 1,
             'fd' => $frame->fd
         ];
-        $this->ws->task($data);
-        $this->ws->send($frame->fd, "server-push:" . date('Y-m-d H:i:s'));
+//        $this->ws->task($data);
+        swoole_timer_after(5000, function () use ($ws, $frame) {
+            $this->ws->push($frame->fd, 'server-time-after:');
+        });
+        $this->ws->push($frame->fd, "server-push:" . date('Y-m-d H:i:s'));
     }
 
     public function onTask($serv, $taskId, $workerId, $data)
@@ -71,6 +74,11 @@ class Ws
     public function onOpen($ws, $request)
     {
         var_dump($request->fd);
+        if ($request->fd == 1) {
+            swoole_timer_tick(2000, function ($timer_id) {
+                echo '2s timerId: ' . $timer_id;
+            });
+        }
     }
 }
 
