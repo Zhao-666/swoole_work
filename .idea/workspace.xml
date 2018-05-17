@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c4e5441-a475-4f4f-8f1d-caf8dacc3e5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/io/write.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/io/mysql.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/server/http_server.php" afterPath="$PROJECT_DIR$/demo/server/http_server.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,17 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="udp_client.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/client/udp_client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="http_server.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="http_server.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/server/http_server.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
@@ -35,12 +24,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/index.html">
+      <file leaf-file-name="mysql.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/io/mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+              <folding>
+                <marker date="1526564561896" expanded="true" signature="738:769" ph="select * fro... test" />
+                <marker date="1526564561896" expanded="true" signature="792:819" ph="update test " />
+                <marker date="1526564561896" expanded="true" signature="792:821" ph="update test " />
+                <marker date="1526564561896" expanded="true" signature="792:841" ph="update test " />
+                <marker date="1526564561896" expanded="true" signature="792:842" ph="update test " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,6 +139,7 @@
         <option value="$PROJECT_DIR$/demo/io/read.php" />
         <option value="$PROJECT_DIR$/demo/io/write.php" />
         <option value="$PROJECT_DIR$/demo/server/http_server.php" />
+        <option value="$PROJECT_DIR$/demo/io/mysql.php" />
       </list>
     </option>
   </component>
@@ -255,12 +251,12 @@
       <workItem from="1526220132808" duration="2283000" />
       <workItem from="1526308071250" duration="1302000" />
       <workItem from="1526479418649" duration="4046000" />
-      <workItem from="1526554537475" duration="2679000" />
+      <workItem from="1526554537475" duration="4760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15859000" />
+    <option name="totallyTimeSpent" value="17940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
@@ -594,6 +590,28 @@
         <state relative-caret-position="494">
           <caret line="24" column="83" lean-forward="false" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/eaglewu/swoole-ide-helper/src/Mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/io/mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <marker date="1526564561896" expanded="true" signature="738:769" ph="select * fro... test" />
+            <marker date="1526564561896" expanded="true" signature="792:819" ph="update test " />
+            <marker date="1526564561896" expanded="true" signature="792:821" ph="update test " />
+            <marker date="1526564561896" expanded="true" signature="792:841" ph="update test " />
+            <marker date="1526564561896" expanded="true" signature="792:842" ph="update test " />
+          </folding>
         </state>
       </provider>
     </entry>
