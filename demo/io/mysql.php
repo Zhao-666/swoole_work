@@ -41,6 +41,7 @@ class AysMysql
                 } else {
                     print_r($result);
                 }
+                $db->close();
             });
         });
     }
